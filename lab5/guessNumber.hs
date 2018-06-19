@@ -12,9 +12,9 @@ main = do
   
 loop :: Integer -> Integer -> IO ()
 loop secret 3 = do
-      putStrLn "You failed!"
-      putStr "It was: "
-      print secret
+  putStrLn "You failed!"
+  putStr "It was: "
+  print secret
 loop secret tries = do
   guess <- readLn :: IO Integer
   case compare guess secret of
